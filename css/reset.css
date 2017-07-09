@@ -1,0 +1,297 @@
+@charset "utf-8";
+/* CSS Document */
+
+*,body,div,span,ul,li,a,p{
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:100%;
+	color:#fff;
+	font-size:15px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+@font-face{
+	src:url(calibrib.ttf);
+	font-family:calib;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0px;
+	padding:0px;
+	font-family:calib;
+}
+
+h2{
+	text-transform:uppercase;
+	font-size:50px;
+	font-weight:700;
+	letter-spacing:0px;
+}
+
+h4.read1,h4.read3{
+	border:solid 2px #fff;
+	padding:0px 10px;
+	line-height: 48px;
+	float:left;
+	font-weight:normal;
+	color: #fff;
+	letter-spacing: 0.5px;
+	transition:all 0.5s;
+	font-family: 'Titillium Web', sans-serif;
+}
+h4.read1:hover,h4.read3:hover{
+	background:#00A0E3;
+	color:#fff;
+	border:solid 2px #00A0E3;
+}
+h4.read3{
+	border:solid 1px #fff;
+	color:#fff;
+}
+h4.read3:hover{
+	background:none;
+	color:#fff;
+	border:solid 2px #fff;
+}
+
+
+h4.read2{
+	border:solid 2px #410715;
+	color:#410715;
+	padding:0px 27px;
+}
+h4.read2:hover{
+	background:#00A0E3;
+	color:#fff;
+	border:solid 2px #00A0E3;
+}
+
+li{
+	list-style:none;
+}
+
+a{
+	color:#333;
+	text-decoration:none;
+}
+
+p{
+	font-family: 'Titillium Web', sans-serif;
+	letter-spacing:0.6px;
+}
+
+
+input.input1{
+	padding:0px 9px;
+	border:none;
+	outline:none;
+	height:46px;
+}
+
+textarea.textarea1{
+	padding:6px 9px;
+	resize:none;
+	border:none;
+	outline:none;
+}
+
+input.button1{
+	background: #E12D00;
+	box-shadow: 0px 0px 4px #E12D00;
+	outline:none;
+	border:none;
+	line-height:40px;
+	cursor:pointer;
+	text-transform: uppercase;
+	padding:0px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	color:#fff;
+	font-family: 'Quicksand', sans-serif;
+}
+
+
+.centerhead1{
+	width:100%;
+	float:left;
+	text-align:center;
+	position:relative;
+}
+.centerhead1 p{
+	padding:5px 0px 18px 0px;
+}
+
+.popup1{
+	width:100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	background:url(../images/bg-pop1.jpg) no-repeat;
+	background-size:100% 100%;
+	height:100%;
+	display:none;
+	z-index:99999999999999999999999999999999999999999999999999999999999999999;
+}
+.popup1 .popbox1{
+	width:700px;
+	float:left;
+	position:absolute;
+	top:20%;
+	left:50%;
+	margin-left:-325px;
+	border-radius:8px;
+	background:#fff;
+	padding:25px;
+}
+.popup1 .popbox1 .close5{
+	width:30px;
+	height:30px;
+	border-radius:150px;
+	background:#fff;
+	position: absolute;
+	color: #000;
+	top: -9px;
+	right: -11px;
+	text-align:center;
+	font-weight:bold;
+	font-family: 'Quicksand', sans-serif;
+	cursor:pointer;
+	line-height:30px;
+}
+
+
+h4.borbutton{
+	border:solid 1px #fff;
+	color:#fff;
+	display:inline-block;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 40px;
+	padding: 0px 12px;
+}
+
+
+.demo{
+			position:absolute;
+			right:0%;
+			top:0%;
+			width:55%;
+			height:100%;
+			background:url(../images/bgpage3.png) no-repeat;
+			background-size:100% 100%;
+			
+		}
+		
+		.demo2{
+			position:absolute;
+			left:0%;
+			top:0%;
+			width:48%;
+			height:100%;
+			background:url(../images/bgpage44.png) repeat;
+			background-size:100% 100%;
+		}
+		
+		
+	.active .slideInRight {
+    		animation: slideInRight 2s;
+		}
+		@keyframes slideInRight {
+		  0% {
+		    transform: translate3d();
+		    visibility: visible;
+			left:-2500px;
+		  }
+		  
+		  100% {
+		    transform: translate3d(0, 0, 0);
+			left:0px;
+		  }
+		}
+		.active .slideInRightlate {
+    		animation: slideInRightlate 2s;
+		}
+		@keyframes slideInRightlate {
+		  0% {
+		    transform: translate3d();
+		    visibility: visible;
+			right:-1000px;
+		  }
+		  
+		  100% {
+		    transform: translate3d(0, 0, 0);
+			right:0px;
+		  }
+		}
+
+
+		.active .slideInLeft {
+    		animation: slideInLeft 3s both
+		}
+		@keyframes slideInLeft {
+		  0% {
+		    transform: translate3d();
+		    visibility: visible;
+			right:-1000px;
+		  }
+
+		  100% {
+		   transform: translate3d(0, 0, 0);
+			right:0px;
+		  }
+		}
+		
+		
+		.active .slideInLeftlate {
+    		animation: slideInLeftlate 0.5s both
+		}
+		@keyframes slideInLeftlate {
+		  0% {
+		    transform: translate3d();
+		    visibility: visible;
+			right:-1000px;
+		  }
+
+		  100% {
+		   transform: translate3d(0, 0, 0);
+			right:0px;
+		  }
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		/* gallery */
+		
+		
+		.active .gallerylft {
+    		animation: gallerylft 2s;
+
+		}
+		@keyframes gallerylft {
+		  0% {
+		    transform: translate3d();
+		    visibility: visible;
+			left:-2500px;
+		  }
+		  
+		  100% {
+		    transform: translate3d(0, 0, 0);
+			left:0px;
+		  }
+		}
+		
+		
+		
+		  
+	

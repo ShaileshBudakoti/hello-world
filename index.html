@@ -1,1 +1,1208 @@
-this is test
+
+
+
+
+
+<!DOCTYPE HTML>
+<html><head>
+<meta charset="utf-8">
+<title>The Event Squad</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="images/fav.jpg" rel="shortcut icon" type="image/jpg">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/gen_validatorv4.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+<!-- start fullsite -->
+<link type="text/css" rel="stylesheet" href="js/fullsite/custom-styles.css"/>
+<link type="text/css" rel="stylesheet" href="js/fullsite/animate.css"/> 
+<script type="text/javascript" src="js/fullsite/jquery-1.11.2.min.js"></script> 
+<script type="text/javascript" src="js/fullsite/jquery.pagepiling.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+      if ($(window).width() > 750) {
+          $('#pagepiling').pagepiling({
+              menu: '#menu',
+//                        sectionsColor: ['#e44b35', '#fff', '#fff', '#fff', '#e6f4ee', '#e6f4ee', '#fff', '#e6f4ee'],
+              sectionsColor: ['#e44b35', '#fff', '#fff', '#fff1f1', '#fff1f1', '#fff1f1', '#fff1f1'],
+              onLeave: function (index, nextIndex, direction) {
+                  if (!(index == 1 && nextIndex == 2 && direction == 'down' && $('.banner').hasClass('with-splash'))) {
+                      
+                  }
+              },
+              afterLoad: function (anchorLink, index) {
+                  if($('.section.active').css('background-color') == 'rgb(228, 75, 53)' || $('.section').css('background-color') == '#E44B35' || $('.section').css('background-color') == '#e44b35') {
+                      $('#logo-red').fadeOut(100, function () {
+                          $('#logo-blue').fadeIn();
+                      });
+                  } else {
+                      $('#logo-blue').fadeOut(100, function () {
+                          $('#logo-red').fadeIn();
+                      });
+                  }
+                  if (index != 1) {
+                      $('#logo').removeClass('hidden');
+                      $('#menu').removeClass('hidden');
+                  } else {
+                      $('#logo').removeClass('hidden');
+                      $('#menu').removeClass('hidden');
+                  }
+                  if (index == 2) {
+                      $('.social.right-audience .diagonal-layer').animate({ right: '-500px' }, 700, '', function () {
+                          $('.social.right-audience .diagonal-layer-text').addClass('animated fadeInDown');
+                      });
+                  } else if (index == 3) {
+                      $('.social.brand-experience .diagonal-layer').animate({ left: '-500px' }, 700, '', function () {
+                          $('.social.brand-experience .diagonal-layer-text').addClass('animated fadeInDown');
+                      });
+                  } else if (index == 4) {
+                      $('.social.customized-solutions .diagonal-layer').animate({ right: '-500px' }, 700, '', function () {
+                          $('.social.customized-solutions .diagonal-layer-text').addClass('animated fadeInDown');
+                      });
+                  } else {
+                      $('.social.right-audience .diagonal-layer, .social.customized-solutions .diagonal-layer').css('right', '-80%;');
+                      $('.social.brand-experience .diagonal-layer').css('left', '-80%;');
+                      $('.diagonal-layer-text').css('opacity', '0');
+                  }
+              },
+              navigation: {
+                  position: 'right',
+                  tooltips: ['', '', '', '', '', '', '', '', '']
+              }
+          });
+      }
+});
+</script>
+<!-- end fullsite -->
+
+<!---------------------------------Send Mail --------------------------------->
+
+<script>
+$(function() {
+    $("#contact .button1").click(function() {
+        
+				
+		var name = $("#user_name").val();
+        var email = $("#user_email").val();
+        var mobile = $("#mobile").val();
+		var query = $("#query").val();
+        var dataString = 'name='+ name + '&email=' + email + '&mobile=' + text+'&query='+query;
+		alert(dataString);		
+				   $.ajax({
+					type: "POST",
+					url: "sendMail.php",
+					data: data,
+					success: function(){
+					
+					}
+				});
+
+        return false;
+    });
+});
+</script>
+
+<!---------------------------------Send Mail End ------------------------------>        
+        
+
+ 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://path/to/font-awesome/css/font-awesome.min.css">
+
+<!-- start slider -->
+	<link rel="stylesheet" href="js/slider/responsiveslides.css" />
+	<script src="js/slider/responsiveslides.js"></script>
+	<script>
+		$(function () {
+		  $("#slider").responsiveSlides({
+			auto: false,
+			pager: false,
+			slide: true,
+			nav: true,
+			speed: 500,
+			namespace: "centered-btns"
+		  });
+		});
+	</script>
+    <script>
+		$(function () {
+		  $("#slider1").responsiveSlides({
+			auto: true,
+			pager: false,
+			slide: true,
+			nav: true,
+			speed: 500,
+			namespace: "centered-btns"
+		  });
+		});
+	</script>
+    <script>
+		$(function () {
+		  $("#slider3").responsiveSlides({
+			auto: false,
+			fade: true,
+			pager: false,
+			slide: true,
+			nav: true,
+			speed: 500,
+			namespace: "centered-btns"
+		  });
+		});
+	</script>
+  <!-- end slider -->
+  
+
+  
+  <!-- start hover gallery -->
+<script>
+[].slice.call( document.querySelectorAll('a[href="#"') ).forEach( function(el) {
+	el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+} );
+</script>
+<!-- end hover gallery -->
+
+
+
+<script>
+
+$(document).on('click', 'a[href^="#"]', function(e) {
+    // target element id
+    var id = $(this).attr('href');
+    
+    // target element
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+    
+    // prevent standard hash navigation (avoid blinking in IE)
+    e.preventDefault();
+    
+    // top position relative to the document
+    var pos = $(id).offset().top;
+    
+    // animated top scrolling
+    $('body, html').animate({scrollTop: pos});
+});
+
+</script>
+
+
+
+
+<link rel="stylesheet" href="js/testi/DG_Slider.css" type="text/css" media="all" />
+<script src="js/testi/jquery.DG_Slider.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function($){	
+  $(function(){
+    $('#testi').DG_Slider({
+      auto: true, pager: true, autoDelay:25000
+    });
+  });	
+}(jQuery))
+</script>
+<script type="text/javascript">
+(function($){	
+  $(function(){
+    $('#testi1').DG_Slider({
+      auto: true, pager: true, autoDelay:25000
+    });
+  });	
+}(jQuery))
+</script>
+
+<!-- start nav -->
+<link rel="stylesheet" href="js/nav/jquery.fatNav.min.css">
+<!-- end nav -->
+<!-- start hover gallery -->
+<link rel="stylesheet" type="text/css" href="js/hover1/demo.css" />
+<link rel="stylesheet" type="text/css" href="js/hover1/set1.css" />
+<!-- end hover gallery -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://path/to/font-awesome/css/font-awesome.min.css">
+
+
+<!-- start lightbox -->
+<link href="js/lightbox/jquery.fs.boxer.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/lightbox/jquery.fs.boxer.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".boxer").not(".retina, .boxer_fixed, .boxer_top, .boxer_format, .boxer_mobile, .boxer_object").boxer();
+
+        $(".boxer.boxer_fixed").boxer({
+            fixed: true
+        });
+
+        $(".boxer.boxer_top").boxer({
+            top: 50
+        });
+        $(".boxer.retina").boxer({
+            retina: true
+        });
+
+        $(".boxer.boxer_format").boxer({
+            formatter: function ($target) {
+                return '<h3>' + $target.attr("title") + "</h3>";
+            }
+        });
+
+        $(".boxer.boxer_object").click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $.boxer($('<div class="inline_content"><h2>More Content!</h2><p>This was created by jQuery and loaded into the new Boxer instance.</p></div>'));
+        });
+
+        $(".boxer.boxer_mobile").boxer({
+            mobile: true
+        });
+    });
+</script>
+<!-- end lightbox -->
+
+
+
+</head>
+
+<body>
+<div class="startpage" style="position:fixed; width:100%; height:100%;">
+        <div class="flogo">
+        	<img src="images/logo.png" title="" alt="">
+        </div>
+    </div>
+
+
+
+<div class="header">    
+                <div class="fat-nav">
+        		<div class="fat-nav__wrapper pp-nav">
+            <ul>
+              <li data-menuanchor="page1"><a href="" class="">Home</a></li>
+                <li data-menuanchor="page2"><a href="" class="">About Us</a></li>
+                <li data-menuanchor="page3"><a href="" class="">Our Services</a></li>
+                <li data-menuanchor="page4"><a href="" class="">Gallery</a></li>
+                <li data-menuanchor="page5"><a href="" class="">Testimonials</a></li>
+                <li data-menuanchor="page6"><a href="" class="font"></a></li>
+                <li data-menuanchor="page7"><a href="" class="">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="fixnav">
+<div class="pp-nav nones">
+  <ul>
+  <li data-menuanchor="page1"><a href="" class=""></a></li>
+    <li data-menuanchor="page2"><a href="" class=""></a></li>
+    <li data-menuanchor="page3"><a href="" class=""></a></li>
+    <li data-menuanchor="page4"><a href="" class=""></a></li>
+    <li data-menuanchor="page5"><a href="" class=""></a></li>
+    <li data-menuanchor="page6"><a href="" class=""></a></li>
+    <li data-menuanchor="page7"><a href="" class=""></a></li>
+</ul>
+</div>
+</div>
+
+
+<div class="body" id="pagepiling">
+			
+            <!-- start home -->
+            <div class="section banner with-splash page11">
+            	<div class="header">
+   				<div class="">
+            	<div class="hlogo1">
+                	<a href="http://www.theeventsquad.in/"><img src="images/llogo.png" title="" alt=""></a>
+                </div>
+                
+                
+            </div>
+</div>
+            	<div class="about">
+            <div class="slider">
+            <div class="rslides_container">
+                <ul class="rslides" id="slider1">
+                    <li><img src="images/home1.jpg" title="" alt="" ></li>
+                    <li><img src="images/home2.jpg" title="" alt="" ></li>
+                    <li><img src="images/home3.jpg" title="" alt="" ></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+            </div>
+            <!-- end home -->
+            
+            <!-- start about us -->
+            <div class="section social right-audience page2">
+            	<div class="header">
+   <div class="">
+            	<div class="hlogo">
+                	<a href="http://www.theeventsquad.in/"><img src="images/logo.png" title="" alt=""></a>
+                </div>
+                
+                
+            </div>
+</div>
+                <div class="diagonal-layer-text">
+                	<div class="third">
+                   <img src="images/aboutus.png" title="" alt="">
+                  
+			<div class="pp-nav">
+            <ul>
+              <li data-menuanchor="page1" class="disnone"><a href="">Home</a></li>
+                <li data-menuanchor="page2" class="disnone"><a href="">About Us</a></li>
+                <li data-menuanchor="page3"><a href=""><h4 class="read1">Our Services</h4></a></li>
+                <li data-menuanchor="page4" class="disnone"><a href="">Gallery</a></li>
+            </ul>
+       	 	</div>
+                    </div>
+                </div>
+                <div class="diagonal-layer"></div>
+            </div>
+            <!-- end about us -->
+            
+            <!-- start our services -->
+            <div class="section social brand-experience page3">
+            <div class="header">
+   <div class="">
+            	<div class="hlogo">
+                	<a href="http://www.theeventsquad.in/"><img src="images/logo.png" title="" alt=""></a>
+                </div>
+                
+                
+            </div>
+</div>
+                <div class="diagonal-layer-text">
+                    <div class="forth">
+            	<div class="forthbox22"><h2><span>Our</span> Services</h2></div>
+                
+                <div class="forthbox22">
+                <div class="fortptext">
+                	<p>We as an event management veterans, give you tangible results by breeding innovation in your events. We deliver everything when you think of an event.</p>
+                </div>
+                	<div class="fortsec">
+                    
+                    <ul>
+                    
+						 <li><a class="boxer" href="#hidden_content1">The Corporate<br> Circuit </a></li>
+                        <li class="rht"><a class="boxer" href="#hidden_content2">The Social <br>Circuit</a></li>
+                    </ul>
+                    </div>
+                    <div class="fortsec">
+                    <ul>
+                    <li class="position"><a class="boxer line1" href="#hidden_content5">The Brand Activation <br>Circuit</a></li>
+                    </ul>
+                    </div>
+                    <div class="fortsec">
+                    <ul>
+                        <li><a class="boxer" href="#hidden_content3">The Celebrity <br>Circuit</a></li>
+                        <li class="rht"><a class="boxer" href="#hidden_content4">The Marketing<br> Circuit</a></li>
+                    </ul>
+                    </div>
+                    </div>
+                    <div id="hidden_content1">
+                    <div class="inline_contentimg popdesign1">
+                   <h4>The Corporate Circuit </h4>
+                   <p>We put on our corporate shoes in your:</p>
+                   <ul>
+                   	<li>Seminars</li>
+                    <li>Annual Days</li>
+                    <li>Family Days </li>
+                    <li>Rewards and Recognition Events</li>
+                    <li>Venue and Hotel Sourcing</li>
+                    <li>Corporate award ceremonies</li>
+                    <li>Corporate offsites</li>
+                    <li>Product launches</li>
+                    <li>Team building activities</li>
+                   </ul>
+                	</div>
+                	</div>
+                    <div id="hidden_content2">
+                    <div class="inline_contentimg popdesign1">
+                   <h4>The Social Circuit </h4>
+                   <p>We become your family members and do:</p>
+                   <ul>
+                   	<li>Wedding planning</li>
+                    <li>Decoration and Catering</li>
+                    <li>Birthday Bash</li>
+                    <li>Anniversary celebration</li>
+                    <li>Baby Showers</li>
+                    <li>Private Parties</li>
+                    
+                   </ul>
+                	</div>
+                	</div>
+                    <div id="hidden_content3">
+                    <div class="inline_contentimg popdesign1">
+                   <h4>The Celebrity Circuit  </h4>
+                   <p>We add the glam factor to your event by encashing our links in the industry with:</p>
+                   <ul>
+                   	<li>Film Stars</li>
+                    <li>TV Stars</li>
+                    <li>Sporting icons</li>
+                    <li>Models</li>
+                    <li>Singers</li>
+                    <li>Performers</li>
+                    <li>Entertainers</li>
+                   </ul>
+                	</div>
+                	</div>
+                    <div id="hidden_content4">
+                    <div class="inline_contentimg popdesign1">
+                   <h4>The Marketing Circuit </h4>
+                   <p>Communicate your business or sales strategy in the most motivating of environments with The Event Squad:</p>
+                   <ul>
+                   	<li>Sales Kick Off Meets</li>
+                    <li>Dealer Meets</li>
+                    <li>Customer Meets</li>
+                    <li>Partner Meets</li>
+                    <li>Press Conference Sets</li>
+                   </ul>
+                	</div>
+                	</div>
+                    <div id="hidden_content5">
+                    <div class="inline_contentimg popdesign1">
+                   <h4>The Brand Activation Circuit   </h4>
+                   <p>Give your brand the much awaited limelight with our brand activation skills:</p>
+                   <ul>
+                   	<li>Mall Promotions</li>
+                    <li>School / College Contact Programs</li>
+                    <li>Road Shows, Canter Services</li>
+                    <li>RWA / Apartment Promotions</li>
+                    <li>In-store Branding and Merchandizing</li>
+                    <li>Club Activations</li>
+                    <li>Sampling and Tasting Events</li>
+                   </ul>
+                	</div>
+                	</div>
+            
+                    <div class="pp-nav">
+            <ul>
+              <li data-menuanchor="page1" class="disnone"><a href="">Home</a></li>
+                <li data-menuanchor="page2" class="disnone"><a href="">About Us</a></li>
+                <li data-menuanchor="page3" class="disnone"><a href="">Our Services</a></li>
+                <li data-menuanchor="page4"><a href=""><h4 class="read1 read2">Gallery</h4></a></li>
+            </ul>
+       	 	</div>
+                
+            </div>
+                </div>
+                <div class="diagonal-layer"></div>
+            </div>
+            <!-- end our services -->
+            
+            <!-- start gallery -->
+            <div class="section social customized-solutions projects">
+			<div class="header">
+   				<div class="">
+            	<div class="plogo1">
+                	<a href="http://www.theeventsquad.in/"><img src="images/logo.png" title="" alt=""></a>
+                </div>
+            </div>
+				</div>
+               <div class="container-fluid">
+                    <div class="row one">
+                        <div class="col-sm-4">
+                            <div class="left">
+                            <a onClick="showpop1()">
+                                <div class="display-table centerhead1">
+                                    <div>       
+                                        <h2>Our Work</h2>
+                                        <p>Catch a glimpse of our successful Events.</p>
+                                        <h4 class="borbutton">See All</h4>
+                                        <div class="garrow1"></div>
+                                    </div>
+                                </div></a>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="lucia each-project" style="background-image: url('images/gallery1.jpg');">
+                                <a onClick="showpop2()">
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <img src="images/logo.png" title="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="tvs each-project" style="background-image: url('images/gallery30.jpg');">
+                                <a onClick="showpop3()">
+                                    <div class="project-layer-text display-table" style="font-size: 28px;">
+                                        <div>
+                                            <img src="images/logo.png" title="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row two">
+                        <div class="col-sm-4">
+                            <div class="tvs each-project" style="background-image: url('images/gallery2.jpg');">
+                                <a onClick="showpop4()">
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                           <img src="images/logo.png" title="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="indus-league each-project" style="background-image: url('images/gallery25.jpg');">
+                                <a onClick="showpop5()">
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <img src="images/logo.png" title="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="sidvin each-project" style="background-image: url('images/gallery14.jpg');">
+                                <a onClick="showpop6()">
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <img src="images/logo.png" title="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <!-- end gallery -->
+            
+            <!-- start testimonials -->
+            <div class="section social div1verti customized-solutions page6">
+            <div class="header">
+   <div class="">
+            	<div class="hlogo">
+                	<a href="http://www.theeventsquad.in/"><img src="images/logo.png" title="" alt=""></a>
+                </div>
+                
+                
+            </div>
+</div>
+                <div class="div1verti">
+              <div class="textimonialmain">
+    	<div class="textimonial slideInRight">
+        	<h2>Testimonials</h2>
+            <div class="demo-wrap">
+                <ul id="testi">
+                    <li>
+                    <div class="img1">
+                        <img src="images/vikas.jpg" title="" alt="">
+                    </div>
+                    <div class="text1">
+                        <p>They never lose sight of the ultimate goal while managing the smallest detail. They have the drive and determination to turn a creative idea into a rewarding event. They bought fun, creativity and contentment to my wife’s baby shower.</p>
+                        <h3>" Vikas Chugh, Owner, Harish Bakers "</h3>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="img1">
+                        <img src="images/ankitmittal.jpg" title="" alt="">
+                    </div>
+                    <div class="text1">
+                        <p>Hiring The Event Squad as our wedding coordinator was absolutely one of the best decisions we made.Their expertise, responsiveness and organization made our wedding a complete breeze! </p>
+                        <h3>" Ankit Mittal "</h3>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="textimonial slideInRightlate">
+            <div class="demo-wrap">
+                <ul id="testi1">
+                    <li>
+                    <div class="img1 rht">
+                        <img src="images/testi55.png" title="" alt="">
+                    </div>
+                    <div class="text1 lft">
+                        <p>I would describe The Event Squad in two ways: Total Reliability and Absolute Confidence.</p>
+                        <h3>" Deepika Juneja "</h3>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="img1 rht">
+                        <img src="images/testi55.png" title="" alt="">
+                    </div>
+                    <div class="text1 lft">
+                        <p>You didn't just take care of my company’s event but also my sanity on an enormous project across the country and 10,500 staff. Thanks for your support throughout.</p>
+                        <h3>" Surbhi Sharma  "</h3>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="img1 rht">
+                        <img src="images/ravneet.jpg" title="" alt="">
+                    </div>
+                    <div class="text1 lft">
+                        <p>It is always fun doing work for The Event Squad. They have given me enormous events to work on.</p>
+                        <h3>" Ravneet Singh (Anchor/VJ) "</h3>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+            </div>
+            <!-- end testimonials -->
+            
+            <!-- start x-factor -->
+            <div class="section social customized-solutions page22 projects">
+            <div class="header">
+   				<div class="">
+            	<div class="plogo1">
+                	<a href="http://www.theeventsquad.in/"><img src="images/logo.png" title="" alt=""></a>
+                </div>
+            </div>
+				</div>
+              <div class="container-fluid">
+              	<div class="xfector1">
+                
+                
+                <div class="slider">
+            <div class="rslides_container">
+                <ul class="rslides" id="slider3">
+                <li>
+                <div class="xfector">
+                   <div class="row two">
+                        <div class="col-sm-4">
+                            <div class="tvs each-project" style="background-image: url('images/culshoot.jpg');">
+                                
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Social/Cultural  </span><br />
+                                            event Photography
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="indus-league each-project" style="background-image: url('images/reshoot.jpg');">
+                                
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Religious   </span><br />
+                                            event photography
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="sidvin each-project" style="background-image: url('images/intshoot.jpg');">
+                               
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Interior/Exterior   </span><br />
+                                            Photography
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                
+                            </div>
+                        </div>
+                        </div>
+ <div class="row two">
+                         <div class="col-sm-4">
+                            <div class="tvs each-project" style="background-image: url('images/portshoot.jpg');">
+                               
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Portfolio  </span><br />
+                                            Shoots
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="indus-league each-project" style="background-image: url('images/celeshoot.jpg');">
+                                
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Celebrity   </span><br />
+                                            Shoot
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="sidvin each-project" style="background-image: url('images/indshoot.jpg');">
+                                
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Industrial   </span><br />
+                                            Shoot
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </li>
+                    
+                <li>
+                <div class="xfector">
+                    <div class="row one">
+                        <div class="col-sm-4">
+                            <div class="left">
+                            
+                                <div class="display-table centerhead1">
+                                    <div>       
+                                        <h2>Our X-Factor</h2>
+                                        <p>By being the masters in every realm, we bring to you the doorway where the camera does the talking. We capture emotions, we gather laughs and we add memories in your life basket with our friendly DSLRs.</p>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="lucia each-project" style="background-image: url('images/corevent.jpg');">
+                                
+                                    <div class="project-layer-text display-table">
+                                       <div>
+                                            <span>Corporate event</span><br />
+                                            Photography
+                                        </div>
+                                    </div>
+                                   <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                               
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="tvs each-project" style="background-image: url('images/prewedding.jpg');">
+                                
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Pre Wedding </span><br />
+                                            Shoot
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row one">
+                        <div class="col-sm-4">
+                            <div class="tvs each-project" style="background-image: url('images/weddphoto.jpg');">
+                                
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Wedding </span><br />
+                                            Photography
+                                        </div>
+                                    </div>
+                                   <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="indus-league each-project" style="background-image: url('images/proshoot.jpg');">
+                                
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Product  </span><br />
+                                            shoot
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="sidvin each-project" style="background-image: url('images/ducum.jpg');">
+                                
+                                    <div class="project-layer-text display-table">
+                                        <div>
+                                            <span>Documentary  </span><br />
+                                            Films
+                                        </div>
+                                    </div>
+                                    <div class="project-layer" style="background-color: rgba(255,192,51,0.7);"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </li>
+                    
+                    
+                    </ul>
+                    </div>
+                    </div>
+                    
+                    
+                     <div>
+                
+                   
+             
+                    
+                    
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- end x-factor -->
+            
+            <!-- start contact us -->
+            <div class="section page8 social customized-solutions page33" id="send">
+            <div class="header">
+   <div class="">
+            	<div class="hlogo">
+                	<a href="http://www.theeventsquad.in/"><img src="images/logo.png" title="" alt=""></a>
+                </div>
+                
+                
+            </div>
+</div>
+                <div class="contact">
+        	<div class="contbox5">
+                <div class="contlft">
+                	<p>Drop us a message & We'll get back to You !<h4 class="success"></h4></p>
+                    <ul>
+                    <form action="" method="post" enctype="" name="contact" >
+                        <li><input type="text" name="user_name" id="user_name"  class="input1" placeholder="Name*"
+         ></li>
+                        <li><input type="text" name="user_email" id="user_email"  class="input1" placeholder="Email*" ></li>
+                        <li><input type="text" name="mobile" id="mobile"  class="input1"  placeholder="Mobile*" ></li>
+                        <li><textarea  name="query" id="query"  class="textarea1" cols="" rows="7"  placeholder="Query" ></textarea></li>
+                        <li><input type="submit" value="Submit" class="button1" name="sendMail"></li>
+                     </form>
+                    </ul>
+                <div class="socailss">
+                		<p>Connect With Us -</p>
+                        <ul>
+                            <li><a href="https://www.facebook.com/theeventsquadindia" target="_blank"><img src="images/icon-facebook.png"></a></li>
+                            <li><a href="https://www.linkedin.com/company/the-event-squad-india" target="_blank" class="twi"><img src="images/icon-linkin.png"></a></li>
+                            <li><a href="https://twitter.com/event_squad" target="_blank" class="lin"><img src="images/icon-twitter.png"></a></li>
+                            <li><a href="https://in.pinterest.com/theeventsquad" target="_blank" class="prin"><img src="images/icon-pin.png"></a></li>
+                            <li><a href="https://instagram.com/the_event_squad" target="_blank" class="ingra"><img src="images/icon-istra.png"></a></li>
+                            <li><a href="https://plus.google.com/b/101999090524394586398/101999090524394586398/about" target="_blank" class="goo"><img src="images/icon-google.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contrht">
+                	<div class="address">
+                    	<p><i class="fa fa-map-marker"></i> D-18, Sushant Shopping Arcade, Sushant Lok 1, Near Huda City Center Metro Station, Gurgaon - 122002, Haryana</p>
+                        <p><i class="fa fa-envelope-o"></i>info@theeventsquad.in</p>
+                        <p><i class="fa fa-phone"></i> +91 9871771717, 0124-4211813</p>
+                    </div>
+                	<div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.622201211781!2d77.078831!3d28.460803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18e807c99c99%3A0x196c29e34011ce!2sThe+Event+Squad!5e0!3m2!1sen!2sin!4v1440751273940" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    	
+                    </div>
+                </div>
+            </div>
+        </div>
+              
+            </div>
+            <!-- end contact us -->
+            </div>
+            
+            
+            
+                
+
+
+<script>
+	function showpop1(){
+	document.getElementById("gallery1").style.display="block";
+	document.getElementById("pagepiling").style.display="none";
+	}
+	function showpop2(){
+	document.getElementById("gallery2").style.display="block";
+	document.getElementById("pagepiling").style.display="none";
+	}
+	function showpop3(){
+	document.getElementById("gallery3").style.display="block";
+	document.getElementById("pagepiling").style.display="none";
+	}
+	function showpop4(){
+	document.getElementById("gallery4").style.display="block";
+	document.getElementById("pagepiling").style.display="none";
+	}
+	function showpop5(){
+	document.getElementById("gallery5").style.display="block";
+	document.getElementById("pagepiling").style.display="none";
+	}
+	function showpop6(){
+	document.getElementById("gallery6").style.display="block";
+	document.getElementById("pagepiling").style.display="none";
+	}
+	function closepop1(){
+	document.getElementById("gallery1").style.display="none";
+	document.getElementById("gallery2").style.display="none";
+	document.getElementById("gallery3").style.display="none";
+	document.getElementById("gallery4").style.display="none";
+	document.getElementById("gallery5").style.display="none";
+	document.getElementById("gallery6").style.display="none";
+	document.getElementById("pagepiling").style.display="block";
+	}
+</script>
+
+<script>
+	function testishow1(){
+	document.getElementById("testid").style.display="block";	
+	}
+</script>
+
+<script type="text/javascript">
+$(window).load(function(){
+  setTimeout(function(){ $('.startpage').fadeOut() }, 2000);
+});
+</script>
+
+  <!-- start nav -->
+<script type="text/javascript" src="js/nav/jquery.fatNav.min.js"></script>
+<script type="text/javascript" src="js/nav/main.js"></script>
+<!-- end nav -->
+<link rel="stylesheet" href="js/sliderpop2/flexslider.css" type="text/css" media="screen" />
+<script src="js/sliderpop2/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('.flexslider').flexslider();
+		
+    });
+</script>
+<script type="text/javascript">
+  $(function () {
+      $('.flexslider').flexslider({
+          keyboardScrolling: true,
+      });
+  });
+</script>
+
+    <script src="js/gfade/jquery.smoove.js"></script>
+    <script>$('.block').smoove({offset:'40%'});</script>
+
+
+<!-- start pop gallery -->
+<div class="popup1" id="gallery1">
+	<div class="popbox1">
+    <div id="container">
+		<div class="flexslider">
+	    <ul class="slides">
+	    	<li><img src="images/gallery1.jpg" /></li>
+            <li><img src="images/gallery2.jpg" /></li>
+            <li><img src="images/gallery3.jpg" /></li>
+            <li><img src="images/gallery4.jpg" /></li>
+            <li><img src="images/gallery5.jpg" /></li>
+            <li><img src="images/gallery6.jpg" /></li>
+            <li><img src="images/gallery7.jpg" /></li>
+            <li><img src="images/gallery8.jpg" /></li>
+            <li><img src="images/gallery9.jpg" /></li>
+            <li><img src="images/gallery10.jpg" /></li>
+            <li><img src="images/gallery11.jpg" /></li>
+            <li><img src="images/gallery13.jpg" /></li>
+            <li><img src="images/gallery14.jpg" /></li>
+            <li><img src="images/gallery15.jpg" /></li>
+            <li><img src="images/gallery16.jpg" /></li>
+            <li><img src="images/gallery17.jpg" /></li>
+            <li><img src="images/gallery18.jpg" /></li>
+            <li><img src="images/gallery19.jpg" /></li>
+            <li><img src="images/gallery20.jpg" /></li>
+            <li><img src="images/gallery21.jpg" /></li>
+            <li><img src="images/gallery22.jpg" /></li>
+            <li><img src="images/gallery23.jpg" /></li>
+            <li><img src="images/gallery24.jpg" /></li>
+            <li><img src="images/gallery25.jpg" /></li>
+            <li><img src="images/gallery26.jpg" /></li>
+            <li><img src="images/gallery27.jpg" /></li>
+            <li><img src="images/gallery28.jpg" /></li>
+            <li><img src="images/gallery29.jpg" /></li>
+            <li><img src="images/gallery30.jpg" /></li>
+	    </ul>
+	  </div>	
+	</div>
+    <div class="close5" onClick="closepop1()">X</div>
+    </div>
+</div>
+<div class="popup1" id="gallery2">
+	<div class="popbox1">
+    <div id="container">
+		<div class="flexslider">
+	    <ul class="slides">
+        	<li><img src="images/gallery1.jpg" /></li>
+	    	<li><img src="images/gallery3.jpg" /></li>
+            <li><img src="images/gallery4.jpg" /></li>
+            <li><img src="images/gallery8.jpg" /></li>
+            <li><img src="images/gallery11.jpg" /></li>
+            <li><img src="images/gallery12.jpg" /></li>
+	    </ul>
+	  </div>	
+	</div>
+    <div class="close5" onClick="closepop1()">X</div>
+    </div>
+</div>
+<div class="popup1" id="gallery3">
+	<div class="popbox1">
+    <div id="container">
+		<div class="flexslider">
+	    <ul class="slides">
+        	<li><img src="images/gallery30.jpg" /></li>
+	    	<li><img src="images/gallery27.jpg" /></li>
+            <li><img src="images/gallery28.jpg" /></li>
+            <li><img src="images/gallery29.jpg" /></li>
+	    </ul>
+	  </div>	
+	</div>
+    <div class="close5" onClick="closepop1()">X</div>
+    </div>
+</div>
+<div class="popup1" id="gallery4">
+	<div class="popbox1">
+    <div id="container">
+		<div class="flexslider">
+	    <ul class="slides">
+        	<li><img src="images/gallery2.jpg" /></li>
+	    	<li><img src="images/gallery5.jpg" /></li>
+            <li><img src="images/gallery6.jpg" /></li>
+            <li><img src="images/gallery7.jpg" /></li>
+            <li><img src="images/gallery9.jpg" /></li>
+            <li><img src="images/gallery10.jpg" /></li>
+	    </ul>
+	  </div>	
+	</div>
+    <div class="close5" onClick="closepop1()">X</div>
+    </div>
+</div>
+<div class="popup1" id="gallery5">
+	<div class="popbox1">
+    <div id="container">
+		<div class="flexslider">
+	    <ul class="slides">
+        	<li><img src="images/gallery25.jpg" /></li>
+	    	<li><img src="images/gallery23.jpg" /></li>
+            <li><img src="images/gallery24.jpg" /></li>
+            <li><img src="images/gallery19.jpg" /></li>
+            <li><img src="images/gallery20.jpg" /></li>
+            <li><img src="images/gallery21.jpg" /></li>
+            <li><img src="images/gallery22.jpg" /></li>
+            <li><img src="images/gallery26.jpg" /></li>
+	    </ul>
+	  </div>	
+	</div>
+    <div class="close5" onClick="closepop1()">X</div>
+    </div>
+</div>
+<div class="popup1" id="gallery6">
+	<div class="popbox1">
+    <div id="container">
+		<div class="flexslider">
+	    <ul class="slides">
+        	<li><img src="images/gallery14.jpg" /></li>
+	    	<li><img src="images/gallery15.jpg" /></li>
+            <li><img src="images/gallery16.jpg" /></li>
+            <li><img src="images/gallery17.jpg" /></li>
+            <li><img src="images/gallery18.jpg" /></li>
+	    </ul>
+	  </div>	
+	</div>
+    <div class="close5" onClick="closepop1()">X</div>
+    </div>
+</div>
+<!-- end pop gallery -->
+
+
+<link rel="stylesheet" type="text/css" media="all" href="js/sliderpop1/styles.css">
+<script type="text/javascript" src="js/sliderpop1/jquery.glide.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+      $('.sliderp1').glide({
+          autoplay: 3500,
+          hoverpause: true,
+          arrowRightText: '&rarr;',
+          arrowLeftText: '&larr;',
+      });
+  });
+</script>
+
+<script>window.jQuery || document.write('<script src="js/gslider/jquery-1.11.1.min.js"><\/script>')</script>
+
+
+<script type="text/javascript">
+            $(document).ready(function () {
+                // Section Heights
+                $('.section').height($(window).height());
+                $('.splash').height($(window).height());
+                if ($(window).width() > 750) {
+                    $('.projects>div').height($(window).height() - 90);
+                }
+                $('.each-project').hover(function () {
+                    var $this = $(this);
+                    $this.find('.project-layer').animate({ top: "30%" }, 500, '', function () {  });
+                    $this.find('.project-layer-text').addClass('animated fadeInDown');
+                    $this.find('.project-layer-text').css('opacity', '1');
+                }, function () {
+                    var $this = $(this);
+                    $this.find('.project-layer').animate({ top: "-270%" }, 1, '', function () {
+                        $this.find('.project-layer-text').css('opacity', '0');
+                        $this.find('.project-layer-text').removeClass('animated fadeInDown');
+                    });
+                });
+            });
+        </script>
+        
+     <script language="javascript" type="text/javascript">
+		var frmvalidator  = new Validator("contact");
+		frmvalidator.addValidation("user_name","req","Please enter your name");
+		frmvalidator.addValidation("user_email","req","Please enter your email id");
+		frmvalidator.addValidation("user_email","email","Please enter valid your email");
+		frmvalidator.addValidation("mobile","req","Please enter  contact number");
+		frmvalidator.addValidation("mobile","num","Mobile number must be only digit number");
+		frmvalidator.addValidation("mobile","num","Mobile number must be only digit number"); 
+		frmvalidator.addValidation("mobile","minlen=10","Mobile number must be ten digit");
+	</script>   
+         
+
+</body>
+</html>

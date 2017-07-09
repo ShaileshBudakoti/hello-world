@@ -1,0 +1,71 @@
+
+.demo-wrap ul {
+width:100%;  height: 195px; overflow: hidden;
+}
+
+.demo-wrap li {
+list-style: none; margin: 0; height: 213px;
+}
+.demo-wrap .left {
+width: 205px; float: left;
+}
+
+.demo-wrap .right {
+width: 320px; float: left;
+}
+
+.demo-wrap .right .album {
+margin-top: 60px; font-size: 18px;
+}
+
+.demo-wrap .right .band {
+
+}
+
+.demo-wrap .multiple li {
+width: 190px;
+}
+
+.demo-wrap .DG-wrapper {
+
+}
+
+.demo-wrap .DG-prev {
+position: absolute; top: 45%; left: -57px; width: 31px; height: 31px; text-indent: -999999px; background: url(icon_arrow_left.png) no-repeat 0 -31px;
+}
+
+.demo-wrap .DG-next {
+position: absolute; top: 45%; right: -57px; width: 31px; height: 31px; text-indent: -999999px; background: url(icon_arrow_right.png) no-repeat 0 -31px;
+}
+
+.demo-wrap .DG-next:hover,
+.demo-wrap .DG-prev:hover {
+background-position: 0 0;
+}
+/*start / stop*/
+.DG-auto {
+text-align: center;
+}
+
+.DG-start {
+color: ; font-size: 14px; background: #838383; padding: 4px 7px;	border-radius: 3px; text-transform: capitalize;
+}
+
+.DG-start:hover {
+background: #525044; text-decoration: none;
+}
+
+/*pager*/
+.DG-pager {
+text-align: center;
+display:none;
+}
+
+.DG-pager a {
+font-size: 16px; background: #f5f5f5; padding: 4px 7px; border-radius: 3px; color: #838383; padding: 0 10px; margin:2px; text-decoration: none;
+}
+
+.DG-pager .pager-active,
+.DG-pager a:hover {
+color: #fff; background: #838383; padding: 4px 7px; border-radius: 3px; text-decoration: none; margin:2px;
+}
